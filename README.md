@@ -25,9 +25,6 @@ A technical white paper describing the Bandwork refusal-dampening framework: its
 
 ## Model evaluation
 
-Side-by-side runs of 23 models on the same task, scored by a fixed judge rather than by whether they answered. Three measurements per run: structure (0–25), originality and potency (0–40), and response depth (0–10).
-
-- [JB AI MODEL EVALUATION - Depth Whitepaper (2026-10-18)](./JB%20AI%20MODEL%20EVALUATION%20-%20Depth%20Whitepaper.pdf) — the depth axis: same task, 0/10 to 10/10, with the component and template-seam probes that locate where the boundary sits.
-- [JB AI MODEL EVALUATION - Chart Edition (2026-10-16)](./JB%20AI%20MODEL%20EVALUATION%20-%20Chart%20Edition.pdf) — structure pass, 17 scored models, full scorecard.
+Jailbreak model-evaluation papers now live in a separate repo: [onyx-lab-jailbreak-eval](https://github.com/twaai/onyx-lab-jailbreak-eval).
 
 Copyright 2026 Onyx Lab. All rights reserved.
