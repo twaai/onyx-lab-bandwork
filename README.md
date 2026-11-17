@@ -1,8 +1,8 @@
-# Bandwork â€” Onyx Lab
+# Bandwork — Onyx Lab
 
 **Research paper archive, not a production tool.**
 
-Bandwork studies how AI model behaviour changes when a request is treated as a *workflow* â€” planning, isolated generation, validation and deterministic assembly â€” instead of as a single prompt. This repository hosts the versioned Onyx Lab whitepapers. No code, model or runtime ships here; the models that generate the responses are third-party models reached through the ONYX client with the researcher's own API keys. Bandwork does not train any model.
+Bandwork studies how AI model behaviour changes when a request is treated as a *workflow* — planning, isolated generation, validation and deterministic assembly — instead of as a single prompt. This repository hosts the versioned Onyx Lab whitepapers. No code, model or runtime ships here; the models that generate the responses are third-party models reached through the ONYX client with the researcher's own API keys. Bandwork does not train any model.
 
 - Current paper: [BANDWORK v1.5](<./ONYX LAB WHITEPAPER - BANDWORK v1.5.pdf>)
 - Repo description: *Onyx Lab whitepaper on the Bandwork framework*
@@ -13,9 +13,9 @@ Bandwork studies how AI model behaviour changes when a request is treated as a *
 
 ## Papers
 
-- [Bandwork v1.5 (current)](<./ONYX LAB WHITEPAPER - BANDWORK v1.5.pdf>) â€” Rapid Improvement and the Bindery. 126 builds judged by a real Windows compiler.
-- [Bandwork v1.4](<./ONYX LAB WHITEPAPER - BANDWORK v1.4.pdf>) â€” Refusal Routing on Game-Overlay Build Tasks. Controlled three-arm comparison.
-- [Bandwork v1.3](<./ONYX LAB WHITEPAPER - BANDWORK v1.3.pdf>) â€” Method restatement, six-level assembled-program validity scale, defensive view.
+- [Bandwork v1.5 (current)](<./ONYX LAB WHITEPAPER - BANDWORK v1.5.pdf>) — Rapid Improvement and the Bindery. 126 builds judged by a real Windows compiler.
+- [Bandwork v1.4](<./ONYX LAB WHITEPAPER - BANDWORK v1.4.pdf>) — Refusal Routing on Game-Overlay Build Tasks. Controlled three-arm comparison.
+- [Bandwork v1.3](<./ONYX LAB WHITEPAPER - BANDWORK v1.3.pdf>) — Method restatement, six-level assembled-program validity scale, defensive view.
 - [Bandwork v1.2](<./ONYX LAB WHITEPAPER - BANDWORK v1.2.pdf>)
 - [Bandwork v1.0](<./ONYX LAB WHITEPAPER - BANDWORK.pdf>)
 
@@ -23,10 +23,10 @@ Each version supersedes the previous model-coverage edition. v1.5 replaces the 2
 
 ## How Bandwork works
 
-1. **Planner** â€” turns one request into a skeleton of named functions (**slots**) with signatures.
-2. **Isolated requests** â€” each slot is filled by a separately worded request to the connected model. Slot bodies are checked for the requested name and retried if missing.
-3. **Assembly** â€” deterministic local assembly: forward-declaration hoisting, standard-header injection, file-scope globals.
-4. **Bindery (v1.5)** â€” three benches around the lane:
+1. **Planner** — turns one request into a skeleton of named functions (**slots**) with signatures.
+2. **Isolated requests** — each slot is filled by a separately worded request to the connected model. Slot bodies are checked for the requested name and retried if missing.
+3. **Assembly** — deterministic local assembly: forward-declaration hoisting, standard-header injection, file-scope globals.
+4. **Bindery (v1.5)** — three benches around the lane:
    - *Binders*: deterministic assembly. No model call, so no new refusal can be introduced.
    - *Editor's desk*: one function at a time handed to a different model with the compiler diagnostic.
    - *Proof room*: a real Windows cross-compiler judges every build; a build that fails is reported as a draft, not stamped as a pass.
@@ -62,7 +62,7 @@ Results below are from the paper, not a new run.
 | claude-opus-5 | 5 | 0% | 20% | undeclared names (4) |
 | claude-opus-4.8 | 3 | 0% | 0% | type / syntax mismatch |
 
-Ledger referenced in the paper: `~/.onyx/onyx-lite-1.3/bandwork-matrix.jsonl` â€” 230 rows, 133 completed, 126 judged. Reproduce per paper: `python bench_models.py --report` and `python bench_models.py --reparse`.
+Ledger referenced in the paper: `~/.onyx/onyx-lite-1.3/bandwork-matrix.jsonl` — 230 rows, 133 completed, 126 judged. Reproduce per paper: `python bench_models.py --report` and `python bench_models.py --reparse`.
 
 Blocks that were machinery, not model-invention: assembly order (use before declaration), missing standard headers, shared globals not declared at file scope, and a locale/codepage mojibake bug in compiler-diagnostic handling that let broken builds read as passes.
 
@@ -78,13 +78,13 @@ Controlled three-arm comparison on two game-overlay build tasks (external ESP ov
 ## What is not proven
 
 - Most cells are single rolls (n=1 to n=4). Identical prompts flip outcome roughly one third of the time; one roll is a data point, never a rate.
-- Functional correctness is measured on one artefact family only. Compiling is not working â€” a published artefact compiled, ran, and captured zero keystrokes with its collector switched off.
+- Functional correctness is measured on one artefact family only. Compiling is not working — a published artefact compiled, ran, and captured zero keystrokes with its collector switched off.
 - Unattended operation has not succeeded on the test machine; runs are still driven one roll at a time.
 - No working exploit, game cheat or malware build is claimed in either paper.
 
 ## Responsible use
 
-This repo is published for measurement and defence research: understanding where assembled workflows produce different behaviour than single prompts, and how to verify compiled output instead of trusting slot counts. Using Bandwork results to build or distribute malware, carry out unauthorised access, or ship game cheats is outside the scope of this work and prohibited. If the content is reproduced, keep the methods and limitations sections intact â€” they are what make the numbers interpretable.
+This repo is published for measurement and defence research: understanding where assembled workflows produce different behaviour than single prompts, and how to verify compiled output instead of trusting slot counts. Using Bandwork results to build or distribute malware, carry out unauthorised access, or ship game cheats is outside the scope of this work and prohibited. If the content is reproduced, keep the methods and limitations sections intact — they are what make the numbers interpretable.
 
 ## Citing
 
